@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+      .grandpa {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+        border: 1px solid #333; 
+      }
+      .parent1,.parent2,.parent3,.parent4,.parent5,.parent6 {
+          width: 200px;
+          height: 200px;
+          background: red;
+          top: 20px;
+          margin-top: 20px;
+      }
+      .parent1 {
+          position: absolute;
+      }
+      .parent2 {
+          position: static;
+      }
+      .parent3 {
+          position: fixed;
+      }
+      .parent4 {
+          position: relative;
+      }
+      .parent5 {
+          position: inherit;
+      }
+      .child {
+          position: absolute;
+          width: 100px;
+          height: 150px;
+          background: blue;
+          top: 10px;
+          color: white;
+      }
+    </style>
+</head>
+<body>
+  <div class="grandpa">
+    <div class="parent3">
+      <div class="child">父元素position为fixed,子元素相对窗口定位 (margin-top:20和top:20)</div>
+    </div>
+  </div>
+  <div class="grandpa">
+    <div class="parent1">
+      <div class="child">父元素为absolute,子元素相对父元素定位 (margin-top:20和top:20)</div>
+    </div>
+  </div>
+  <div class="grandpa">
+    <div class="parent2">
+      <div class="child">父元素为static,子元素相对外面的祖父元素定位 (margin-top:20和top:20)</div>  
+    </div>
+  </div>
+  <div class="grandpa">
+    <div class="parent4">
+      <div class="child">relative,子元素相对父元素定位 (margin-top:20和top:20)</div>  
+    </div>
+  </div>
+  <div class="grandpa">
+    <div class="parent5">
+      <div class="child">inherit,子元素相对父元素定位 (margin-top:20和top:20)</div>  
+    </div>
+  </div>
+  <div class="grandpa">
+    <div class="parent6">
+      <div class="child">父元素不设置position,子元素相对外面的祖父元素定位 (margin-top:20和top:20)</div>  
+    </div>
+  </div>
+</body>
+</html>
