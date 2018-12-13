@@ -1,0 +1,21 @@
+.card {
+  display:inline-block;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+}
+.card:hover {
+  box-shadow: 0px 1px 6px rgba(0,0,0,.2);
+}
+.title {
+  float: left;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebebeb;
+}
+.main {
+  height: 100%;
+  padding: 12px;
+}

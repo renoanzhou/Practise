@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>components</title>
+    <link rel="stylesheet" href="./css/card.css">
+</head>
+<body>
+<div id="app">
+  <card>
+    <div>aa</div>
+  </card>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script>
+  var card = {
+    data: () => {
+      return {
+        test: 2
+      }
+    },
+    template: `
+      <div class="card">
+        <div class="title">
+          <slot name="title">{{test}}</slot>
+        </div>
+        <div class="main">
+          <slot></slot>
+        </div>
+      </div>
+    `
+  }
+  var vm = new Vue({
+    el:'#app',
+    components: {
+      'card': card
+    },
+  })
+</script>
+</body>
+</html>
