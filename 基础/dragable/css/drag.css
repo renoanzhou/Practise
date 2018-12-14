@@ -17,9 +17,12 @@ html,body {
   left: 10px;
   height: 500px;
   width: 400px;
+  z-index: 99;
   border-radius: 3px;
   background: white;
   border: 1px solid rgba(0,0,0,.2);
+  transition: top 15ms linear;
+  transition: left 15ms linear;
 }
 .title {
   box-sizing: border-box;
@@ -46,7 +49,7 @@ html,body {
   box-sizing: border-box;
   width: 100%;
   height: 105px;
-  border: 1px solid rgba(0,0,0,.2);
+  /* border: 1px solid rgba(0,0,0,.2); */
 }
 .send-btn {
   position: absolute;
@@ -68,4 +71,64 @@ html,body {
   outline:none;
   resize:none;
   border: 0;
+}
+.tips {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #999;
+  font-size: 30px;
+}
+.left {
+  position: relative;
+  text-align: left;
+}
+.name {
+  color: #ccc;
+  font-size: 12px;
+}
+.right {
+  position: relative;
+  text-align: right;
+}
+.chat-active {
+  z-index: 999;
+}
+.chat-active > .title {
+  background: #38f;
+}
+.chat-active > .chat-close {
+  color: white;
+}
+.send-time {
+  text-align: center;
+  color: rgba(0,0,0,.2);
+  font-size: 12px;
+}
+.left-avatar {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #ccc;
+}
+.right-avatar {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #ccc;
+}
+.right-detail {
+  margin-right: 30px;
+}
+.left-detail {
+  margin-left: 30px;
 }

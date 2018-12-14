@@ -9,15 +9,30 @@
 </head>
 <body>
     <div class="container">
-      <div class="chat">
-        <div class="title" draggable="true"></div>
+      <div class="chat chat-active" >
+        <div class="title"></div>
         <div class="chat-close">x</div>
-        <div class="content"></div>
+        <div class="content">
+          
+        </div>
         <div class="send">
           <textarea class="send-textarea" cols="" draggable="false"></textarea>
         </div>
         <button class="send-btn">发送</button>
       </div>
+
+      <div class="chat" style="left:500px;display: block">
+        <div class="title"></div>
+        <div class="chat-close">x</div>
+        <div class="content">
+          
+        </div>
+        <div class="send">
+          <textarea class="send-textarea" cols="" draggable="false"></textarea>
+        </div>
+        <button class="send-btn">发送</button>
+      </div>
+      <div class="tips">可拖动区域</div>
     </div>
     <script src="./js/drag.js"></script>
 </body>
