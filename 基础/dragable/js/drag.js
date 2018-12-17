@@ -19,10 +19,12 @@
   
   sendBtn1.onclick = function () {
     sendMessage(chat1,textarea1.value);
+    textarea1.value = '';
   }
 
   sendBtn2.onclick = function () {
     sendMessage(chat2,textarea2.value);
+    textarea2.value = '';
   }
 
   container.addEventListener('mousemove',(e) => {
@@ -129,8 +131,8 @@
     let leftTemplate = `
       <div class="left">
         <div class="left-avatar"></div>
+        <div class="send-time">${new Date(message.send_time).toLocaleTimeString()}</div>
         <div class="left-detail">
-          <div class="send-time">${new Date(message.send_time).toLocaleTimeString()}</div>
           <div class="name">${message.name}</div>
           <div class="chat-content">${message.content}</div>
         </div>
